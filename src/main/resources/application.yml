@@ -1,0 +1,33 @@
+spring:
+  application:
+    name: testJobApplication
+  main:
+    web-application-type: none
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/test
+    username: root
+    password: 11111111
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: true
+    generate-ddl: true
+    database: mysql
+    defer-datasource-initialization: true
+  batch:
+    jdbc:
+      initialize-schema: always
+    job:
+      names: ${job.name:NONE}
+  sql:
+    init:
+      mode: always
+
+
+
+
