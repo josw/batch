@@ -13,7 +13,7 @@ import javax.persistence.Table
 @Entity
 @Table(name="user",
 indexes = [
-    Index(name="nameIdx", columnList = "name", unique = false)
+    Index(name="ageIdx", columnList = "age", unique = false)
 ])
 class User(
     @Id
@@ -21,7 +21,7 @@ class User(
     val id : Long? = null,
 
     val name: String,
-    val age: Int,
+    var age: Int,
 
     @CreatedDate
     val createdAt: LocalDateTime = LocalDateTime.now(),

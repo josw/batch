@@ -1,4 +1,10 @@
-insert into user (name, age) values ('hola', 24), ('joke', 30), ('fool', 40);
+insert into user (name, age)
+values
+    ('hola', 24),
+    ('joke1', 30),
+    ('joke2', 30),
+    ('joke3', 30),
+    ('fool', 40);
 
 -- CREATE TABLE `car` (
 --     `id` bigint NOT NULL AUTO_INCREMENT,
